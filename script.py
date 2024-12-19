@@ -1,4 +1,5 @@
 import numpy as np
+from encrypt import encrypted_message
 
 def txt_encode(text):
     l = len(text)
