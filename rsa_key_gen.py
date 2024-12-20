@@ -65,6 +65,9 @@ print("Public Key (e, n):", public_key)
 print("Private Key (d, n):",private_key)
 
 # Save keys to a file
-with open("keys.py", "w") as f:
+with open("public_key.py", "w") as f:
     f.write(f"public_key = {public_key}\n")
+    
+
+with open("private_key.py", "w") as f:
     f.write(f"private_key = {private_key}\n")
