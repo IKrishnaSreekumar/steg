@@ -1,12 +1,12 @@
 import numpy as np
-from encrypt import encrypted_message
+from encrypt import encrypt
 
-def txt_encode(text):
-    l = len(text)
+def txt_encode(encrypt):
+    l = len(encrypt)
     i = 0
     add = ''
     while i < l:
-        t = ord(text[i])
+        t = ord(encrypt[i])
         if 32 <= t <= 64:
             t1 = t + 48
             t2 = t1 ^ 170  # 170: 10101010
@@ -24,7 +24,7 @@ def txt_encode(text):
     print("Length of binary after conversion: ", length)
     HM_SK = ""
     ZWC = {"00": u'\u200C', "01": u'\u202C', "11": u'\u202D', "10": u'\u200E'}
-    file1 = open("Sample_cover_files/cover_text.txt", "r+")
+    file1 = open("./encode.txt", "r+")
     nameoffile = input("\nEnter the name of the Stego file after Encoding (with extension): ")
     file3 = open(nameoffile, "w+", encoding="utf-8")
     word = []
@@ -56,7 +56,7 @@ def txt_encode(text):
 
 def encode_txt_data():
     count2 = 0
-    file_path = "./Sample_cover_files/cover_text.txt"
+    file_path = "./encode.txt"
     file1 = open(file_path, "r")
      
     
