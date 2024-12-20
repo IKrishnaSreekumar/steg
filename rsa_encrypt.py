@@ -1,6 +1,6 @@
 # rsa_encrypt.py
 
-from keys import public_key
+from public_key import public_key
 
 # Function to encrypt a message using RSA
 def rsa_encrypt(message, key):

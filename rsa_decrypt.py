@@ -1,5 +1,5 @@
 # rsa_decrypt.py
-from keys import private_key
+from private_key import private_key
 
 # Function to decrypt a message using RSA
 def rsa_decrypt(encrypted_message, key):
