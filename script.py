@@ -1,9 +1,5 @@
-import numpy as np
 import os
-
-
-# In[2]:
-
+#need to import the list automatically through import 
 
 def txt_encode(text):
     l=len(text)
@@ -19,7 +15,7 @@ def txt_encode(text):
         
         else:
             t1=t-48
-            t2=t1^170
+            t2=t1^170 #XOR Key
             res = bin(t2)[2:].zfill(8)
             add+="0110"+res
         i+=1
@@ -59,8 +55,6 @@ def txt_encode(text):
     print("\nStego file has successfully generated")
 
 
-# In[3]:
-
 
 def encode_txt_data():
     count2=0
@@ -81,15 +75,12 @@ def encode_txt_data():
         encode_txt_data()
 
 
-# In[4]:
-
 
 def BinaryToDecimal(binary):
     string = int(binary, 2)
     return string
 
 
-# In[5]:
 
 
 def decode_txt_data():
@@ -134,7 +125,7 @@ def decode_txt_data():
     print("\nMessage after decoding from the stego file:- ",final)
 
 
-# In[6]:
+
 
 
 def txt_steg():
@@ -174,7 +165,7 @@ def main():
         print("\n\n")
 
 
-# In[27]:
+
 
 
 if __name__ == "__main__":
